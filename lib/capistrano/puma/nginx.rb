@@ -11,6 +11,8 @@ module Capistrano
       set_if_empty :nginx_http_flags, fetch(:nginx_flags)
       set_if_empty :nginx_socket_flags, fetch(:nginx_flags)
       set_if_empty :nginx_use_ssl, false
+      set_if_empty :nginx_port, 80
+      set_if_empty :nginx_ssl_port, 443
     end
 
     def define_tasks
